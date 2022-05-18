@@ -4,9 +4,6 @@
       body {
         font-family: Microsoft JhengHei
       }
-      .issueinput {
-      line-height: 2em; // 2em is (2 * default line height)
-      }
     </style>
   </head>
   
@@ -15,5 +12,16 @@
       <h1>Alderwood School Technical Support Requester</h1>
       <p>This system allows you to request technical support if you need it, by sending an email to me (Oliver Dawkins).<br>When I next check my emails, I will come and help with your request!<br><br>Please enter the details below.</p>
       
-      <input type="text" id="textinputbox" placeholder="Enter Name"><br>
+      <input type="text" id="nameinputbox" placeholder="Enter Name"><br>
       <input type="text" id="issueinputbox" placeholder="Enter issue" style="height:100px;">
+      <button onclick="SubmitForm()">Submit</button>
+    </center>
+  </body>
+  
+  <script>
+    function SubmitForm {
+     var name = document.getElemementByID('nameinputbox').innerHTML;
+      alert(name);
+    }
+  </script>
+</html>
