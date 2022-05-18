@@ -14,14 +14,16 @@
       
       <input type="text" id="nameinputbox" placeholder="Enter Name"><br>
       <input type="text" id="issueinputbox" placeholder="Enter issue" style="height:100px;">
-      <button onclick="SubmitForm()">Submit</button>
+      <br><br><button onclick="SubmitForm()" style="height: 20px">Submit</button>
     </center>
   </body>
   
   <script>
-    function SubmitForm() {
-     var name = document.getElemementByID('nameinputbox').innerHTML;
-      alert(name);
-    }
+    function SubmitForm(){
+     var name = document.getElementById("nameinputbox").value;
+     var issue = document.getElementById("issueinputbox").value;
+     
+     alert("Provided name: " + name + "\nProvided issue: " + issue);
+     }
   </script>
 </html>
