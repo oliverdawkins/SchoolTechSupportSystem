@@ -18,12 +18,31 @@
     </center>
   </body>
   
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     function SubmitForm(){
      var name = document.getElementById("nameinputbox").value;
      var issue = document.getElementById("issueinputbox").value;
      
-     alert("Provided name: " + name + "\nProvided issue: " + issue);
+     Email.send({
+    Host : "smtp-mail.outlook.com",
+    Username : "od.automated.system@outlook.com",
+    Password : "ODAutomatedSystem",
+    To : 'oliverdawkins@alderwood.hants.sch.uk',
+    From : "od.automated.system@outlook.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => {
+    console.log("Outcome: " + message);
+    if (message == "OK") {
+      alert("The request was sent successfully!");
+   else {
+     alert("Something went wrong when sending the request. Here's the result: " + message);
+    };           
+  };
+       
+);
      }
   </script>
 </html>
